@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<!doctype html>
+<style>
+    body {
+    background-image: url({{apod_pic}});
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: fixed;
+}
+</style>
+<html>
+    <body>
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>Upcoming Launches</h1>
+                            <div class="launches">
+                              <p><b>Next Launch</b></p>
+                                {%for i in range(0,10):%} 
+                                <p>
+                                   <div class="date">{{launches[i].date}}</div>
+                                   <div class="craft">{{launches[i].craft}}</div><br>
+                                   <div class="decrip">{{launches[i].descrip}}</div><br>
+                                </p>
+                                {%endfor%} 
+                           </div>
+                    </header>
+                </article>
+
+<!--                 <aside>
+                    <h3>ISS Live Feed</h3>
+                    <p><iframe 
+                            class ="iss"
+                            width="480" 
+                            height="270" 
+                            src="http://www.ustream.tv/embed/17074538?html5ui;autoplay=true" 
+                            allowfullscreen 
+                            webkitallowfullscreen 
+                            scrolling="no" 
+                            frameborder="0" 
+                            style="border: 0 none transparent;">
+                        </iframe></p>
+                </aside> -->
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+    </body>
+</html>
+{% endblock %}

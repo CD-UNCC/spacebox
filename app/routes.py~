@@ -1,0 +1,21 @@
+from flask import Flask, render_template
+import json, urllib
+ 
+app = Flask(__name__)      
+ 
+@app.route('/')
+def home():
+	string = in_space()
+  return render_template('home.html', string)
+
+
+def in_space():
+	html = ''
+	page = urllib.urlopen('http://api.open-notify.org/astros.json')
+	data = json.loads(page.read())
+	for i in data['people']:
+		html = html + '<li>' + i['name'] + ': ' + i['craft'] + '</li>'
+	return html
+
+if __name__ == '__main__':
+  app.run(debug=True)

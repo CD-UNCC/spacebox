@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<!doctype html>
+<style>
+    body {
+    background-image: url({{apod_pic}});
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: fixed;
+}
+</style>
+<html>
+    <body>
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>News Around the Cosmos</h1>
+                        <p><a 
+                                class="twitter-timeline"  
+                                width="480" 
+                                height="500"
+                                href="https://twitter.com/CearDragon/lists/space" 
+                                data-widget-id="643562051793764354"         
+                                data-chrome="nofooter noborders">
+                            </a>
+                            <script>!
+                                function(d,s,id)
+                                {
+                                    var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                    if(!d.getElementById(id))
+                                        {
+                                            js=d.createElement(s);
+                                            js.id=id;
+                                            js.src=p+"://platform.twitter.com/widgets.js";
+                                            fjs.parentNode.insertBefore(js,fjs);
+                                            }
+                                        }(document,"script","twitter-wjs");
+                            </script></p>
+                    </header>
+                </article>
+
+<!--                 <aside>
+                    <h3>ISS Live Feed</h3>
+                    <p><iframe 
+                            class ="iss"
+                            width="480" 
+                            height="270" 
+                            src="http://www.ustream.tv/embed/17074538?html5ui;autoplay=true" 
+                            allowfullscreen 
+                            webkitallowfullscreen 
+                            scrolling="no" 
+                            frameborder="0" 
+                            style="border: 0 none transparent;">
+                        </iframe></p>
+                </aside> -->
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+    </body>
+</html>
+{% endblock %}

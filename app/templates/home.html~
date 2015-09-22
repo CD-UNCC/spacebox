@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Welcome to SpaceBox<h2>
+    <h3>A Customizable Homepage For All Things Astronautics<h3>
+{% in_space() %}
+  </div>
+{% endblock %}
+
