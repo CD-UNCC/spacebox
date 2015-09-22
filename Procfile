@@ -1,1 +1,1 @@
-web: python /app/routes.py --log-file=-
+web: python app/routes.py --log-file=-

@@ -1,1 +1,1 @@
-web: gunicorn routes:app --log-file=-
+web: python /app/routes.py --log-file=-
