@@ -3,6 +3,7 @@ from in_space import in_space
 from launches import get_launches
 from news import get_news 
 from apod import get_apod
+import os
 app = Flask(__name__)      
  
 @app.route('/index')
@@ -20,7 +21,8 @@ def launches():
 
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 
 
 
