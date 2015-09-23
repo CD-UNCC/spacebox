@@ -11,5 +11,9 @@ The idea is to make use of all the exciting APIs involving the cosmos that are a
 If there is not an API where there should be, we make one with kimonolabs.
 
 Current APIs being used are:
+
 http://open-notify.org/Open-Notify-API/People-In-Space/ 
+
 https://api.nasa.gov/index.html [for apod background]
+
+Current production url is: http://secret-ocean-9271.herokuapp.com/
